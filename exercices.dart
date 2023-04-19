@@ -25,6 +25,16 @@ main() {
   print("\nQuestion 2 Answers: ");
   print(question2([1, 5, 87, 90]));
   print(question2([-1, -5, -87, -90]));
+
+  /* 3 - Write a Dart function that takes two lists of integers as input and 
+   returns a new list with only the numbers that appear in both input lists.
+  */
+
+  // answer:
+  print("\nQuestion 3 Answers: ");
+  print(question3([1, 5, 87, 90, 2], [45, 78, -10, 2, 87, 1]));
+  print(question3([-1, -5, -87, -90], [1, 5, 87, 90]));
+  print(question3([-1, -5, -87, -90], []));
 }
 
 bool question1(int a) {
@@ -49,4 +59,8 @@ int question2(List<int> integers) {
     }
   }
   return largest;
+}
+
+List<int> question3(List<int> list1, List<int> list2) {
+  return list1.toSet().intersection(list2.toSet()).toList();
 }
